@@ -4093,6 +4093,10 @@ ghcupDownloads:
             unknown_versioning:
               dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.10.2.0/cabal-install-3.10.2.0-x86_64-windows.zip
               dlHash: 67035900950c049e331b907492d1e07c0c540f20f72cf2df041093e2c1132f13
+          FreeBSD:
+            unknown_versioning:
+              dlUri: https://downloads.haskell.org/~cabal/cabal-install-3.10.2.0/cabal-install-3.10.2.0-x86_64-freebsd.tar.xz
+              dlHash: d8c7ac4e361f0ab223d52808bd5e3c237771ee1192ca8ac45f5c5abd9c464011
         A_32:
           Linux_UnknownLinux:
             unknown_versioning: &cabal-31020-32
