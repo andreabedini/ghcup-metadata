@@ -109,6 +109,7 @@ case $TOOL in
 		cabal --version
 		cabal update
 		ghc -prof main.hs -o hi && ./hi
+        cp -R hi* C:/cabal
 		[[ $(cabal --verbose=3 --ghc-options=-v3 run --enable-profiling ./main.hs -- +RTS -s) -eq 2 ]]
 		;;
     *)
