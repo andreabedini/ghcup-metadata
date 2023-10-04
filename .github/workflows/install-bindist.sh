@@ -14,7 +14,7 @@ ghcup --version
 which ghcup | grep foobarbaz
 
 ghcup_fun() {
-	ghcup -v --url-source="file:$METADATA_FILE" "$@"
+	ghcup --url-source="file:$METADATA_FILE" "$@"
 }
 
 case $TOOL in
