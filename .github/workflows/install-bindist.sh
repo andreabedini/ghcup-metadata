@@ -108,7 +108,8 @@ case $TOOL in
 		ghcup_fun install ghc --set "$(ghcup_fun list -t ghc -r -c available | tail -1 | awk '{ print $2 }')"
 		cabal --version
 		cabal update
-		[[ $(cabal --verbose=0 run --enable-profiling ./main.hs -- +RTS -s) -eq 2 ]]
+		ghc -prof main.hs -o hi && ./hi
+		[[ $(cabal --verbose=3 --ghc-options=-v3 run --enable-profiling ./main.hs -- +RTS -s) -eq 2 ]]
 		;;
     *)
 		$TOOL --version
