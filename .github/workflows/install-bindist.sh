@@ -110,7 +110,7 @@ case $TOOL in
 		cabal update
 		ghc -prof main.hs -o hi && ./hi
         cp -R hi* C:/cabal
-		[[ $(cabal --verbose=3 --ghc-options=-v3 run --enable-profiling ./main.hs -- +RTS -s) -eq 2 ]]
+        [[ $(cabal --store-dir=$(pwd) --verbose=2 --ghc-options=-v3 run --enable-profiling ./main.hs -- +RTS -s) -eq 2 ]]
 		;;
     *)
 		$TOOL --version
