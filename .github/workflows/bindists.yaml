@@ -48,3 +48,11 @@ jobs:
         name: Install ghcup and bindist
         run: .github/workflows/install-bindist.sh
 
+      - if: ${{ github.event_name == 'workflow_dispatch' }}
+        name: Test2
+        run: TOOL=test .github/workflows/test-bindist.sh
+
+      - if: ${{ github.event_name == 'workflow_dispatch' }}
+        name: Test bindist
+        run: .github/workflows/test-bindist.sh
+
