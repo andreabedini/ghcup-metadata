@@ -4329,7 +4329,8 @@ ghcupDownloads:
               dlHash: 1e59dc1e1a1b33085a1789b8ddafb55026211454efe0b4e814c956ef86fe3ea5
             unknown_versioning: *cabal-31020-64-centos7
           Linux_Ubuntu:
-            '< 20': &cabal-31020-64-ubuntu18
+            '< 18': *cabal-31020-64
+            '(>= 18 && < 20)': &cabal-31020-64-ubuntu18
               dlUri: https://downloads.haskell.org/cabal/cabal-install-3.10.2.0/cabal-install-3.10.2.0-x86_64-linux-ubuntu18_04.tar.xz
               dlHash: 7b0bb22c263ae0b43459de1995bf465560d412c12d47af011b2ac27b5d30c7aa
             '>= 20': &cabal-31020-64-ubuntu20
